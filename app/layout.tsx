@@ -14,16 +14,12 @@ export const metadata: Metadata = {
 	description: 'A modern issue tracking application built with Next.js 15'
 }
 
-export default function RootLayout({
-	                                   children
-                                   }: Readonly<{
-	children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang="en">
 		<body className={`${inter.variable} font-sans antialiased`}>
-		<Toaster position="top-right" />
-		{children}
+			<Toaster position="top-right" />
+			{children}
 		</body>
 		</html>
 	)
