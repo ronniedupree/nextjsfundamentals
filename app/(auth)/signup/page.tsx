@@ -1,4 +1,18 @@
-﻿import Link from 'next/link'
+﻿'use client'
+
+import { useActionState } from 'react'
+import { useRouter } from 'next/navigation'
+import Button from '@/components/ui/Button'
+import {
+	Form,
+	FormGroup,
+	FormLabel,
+	FormInput,
+	FormError,
+} from '@/components/ui/Form'
+import Link from 'next/link'
+import toast from 'react-hot-toast'
+import { signUp, ActionResponse } from '@/actions/auth'
 
 export default function SignUpPage() {
 	return (
